@@ -6,7 +6,7 @@ tictactoe = TicTacToe.new
 
 tictactoe.play
 ```
->* I want to mention few differences between my code & Learn.co:
+
 
 ```Ruby
 def full?
@@ -17,17 +17,6 @@ def full?
    @board.all?{|square| square != " " }
 end
 ```
->>* Instead of doing a comparison for each cell, I can say if cell not equal to empty.
-
->* A part of `#play` method could be refactored as following:
-
-Learn.co code:
-
-```Ruby
-puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
-```
-
-Instead of my code:
 
 ```Ruby
 if won?
