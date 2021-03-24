@@ -1,3 +1,37 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
+```Ruby
+tictactoe = TicTacToe.new
+
+tictactoe.play
+```
+>* I want to mention few differences between my code & Learn.co:
+
+```Ruby
+def full?
+  @board.all? {|cell| cell == "X" || cell == "O"}
+end
+
+def full?
+   @board.all?{|square| square != " " }
+end
+```
+>>* Instead of doing a comparison for each cell, I can say if cell not equal to empty.
+
+>* A part of `#play` method could be refactored as following:
+
+Learn.co code:
+
+```Ruby
+puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
+```
+
+Instead of my code:
+
+```Ruby
+if won?
+  puts "Congratulations #{winner}!"
+elsif draw?
+  puts "Cat's Game!"
+end 
