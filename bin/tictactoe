@@ -1,26 +1,4 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
-```Ruby
-tictactoe = TicTacToe.new
 
-tictactoe.play
-```
-
-
-```Ruby
-def full?
-  @board.all? {|cell| cell == "X" || cell == "O"}
-end
-
-def full?
-   @board.all?{|square| square != " " }
-end
-```
-
-```Ruby
-if won?
-  puts "Congratulations #{winner}!"
-elsif draw?
-  puts "Cat's Game!"
-end 
